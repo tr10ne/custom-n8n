@@ -48,11 +48,9 @@ jobs:
         run: |
           sed -i "s/^ARG N8N_VERSION=.*/ARG N8N_VERSION=${LATEST}/" Dockerfile
 
-          next=$(git tag --sort=-v:refname | head -1 | sed 's/^v//')
-          major=$(echo "$next" | cut -d. -f1)
-          minor=$(echo "$next" | cut -d. -f2)
-          patch=$(echo "$next" | cut -d. -f3)
-          version="$major.$minor.$((patch + 1))"
+          # WHY: схема версий как у форков — версия апстрима плюс наш минор и
+          # патч. Обновление n8n всегда начинает новую ветку правок: c1.0.
+          version="${LATEST}-c1.0"
 
           python3 - "$version" "$LATEST" <<'PY'
           import datetime, pathlib, sys
