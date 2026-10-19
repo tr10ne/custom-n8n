@@ -6,6 +6,12 @@ Versioning: [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-10-19
+
+### Changed
+- Default `N8N_VERSION` raised to 2.41.6 so the published image matches the running
+  instance; the previous default would have deployed an older n8n.
+
 ## [1.0.1] - 2026-10-19
 
 ### Changed
