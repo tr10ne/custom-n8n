@@ -1,4 +1,4 @@
-# custom-n8n
+# n8n-media-toolkit
 
 Container image of [n8n](https://n8n.io) extended with the tools that media and document
 workflows need: Ghostscript, GraphicsMagick, Python 3 with build tools, `git`, `tini` and
@@ -13,8 +13,8 @@ packages at runtime.
 ## Build
 
 ```bash
-docker build -t custom-n8n .
-docker build --build-arg N8N_VERSION=2.36.9 -t custom-n8n:2.36.9 .
+docker build -t n8n-media-toolkit .
+docker build --build-arg N8N_VERSION=2.36.9 -t n8n-media-toolkit:2.36.9 .
 ```
 
 `N8N_VERSION` is a build argument, so the same Dockerfile pins or upgrades n8n explicitly.
@@ -24,7 +24,7 @@ docker build --build-arg N8N_VERSION=2.36.9 -t custom-n8n:2.36.9 .
 ```bash
 docker run --rm -p 5678:5678 \
   -v "$PWD/data:/home/node/.n8n" \
-  custom-n8n
+  n8n-media-toolkit
 ```
 
 The container runs as the unprivileged `node` user (uid 1000); the data directory must be
