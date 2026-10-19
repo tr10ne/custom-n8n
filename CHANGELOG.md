@@ -6,6 +6,12 @@ Versioning: [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-10-19
+
+### Changed
+- Repository renamed to `n8n-media-toolkit`: the name now says what the image adds —
+  the media toolchain for PDF and image workflows.
+
 ## [1.0.0] - 2026-10-19
 
 First release.
