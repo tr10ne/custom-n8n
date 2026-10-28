@@ -1,6 +1,6 @@
 FROM node:24-alpine3.20
 
-ARG N8N_VERSION=2.44.7
+ARG N8N_VERSION=2.45.5
 
 RUN apk add --no-cache \
     ghostscript \
